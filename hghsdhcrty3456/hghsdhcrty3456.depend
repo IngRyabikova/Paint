@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1598549969 source:c:\users\user\desktop\1\hghsdhcrty3456\main.cpp
+	<tchar.h>
+	<windows.h>
+	"functionsmain.cpp"
+
+1599857952 c:\users\user\desktop\1\hghsdhcrty3456\functionsmain.cpp
+	"functioncircle.cpp"
+	"functionsrays.cpp"
+	<vector>
+
+1596479444 c:\users\user\desktop\1\hghsdhcrty3456\functioncircle.cpp
+	"functionmanyangle2Dfigure.cpp"
+
+1599852517 c:\users\user\desktop\1\hghsdhcrty3456\functionmanyangle2dfigure.cpp
+	"functionline.cpp"
+	"functionsmath.cpp"
+
+1599852405 c:\users\user\desktop\1\hghsdhcrty3456\functionline.cpp
+	<windows.h>
+	"math.h"
+
+1598526858 c:\users\user\desktop\1\hghsdhcrty3456\functionsrays.cpp
+
+1599852607 c:\users\user\desktop\1\hghsdhcrty3456\functionsmath.cpp
+
+1599857737 c:\users\user\desktop\1\hghsdhcrty3456\functionsfill.cpp
+	<stdafx>
+
+1600175116 source:c:\users\user\desktop\hghsdhcrty3456\main.cpp
+	<tchar.h>
+	<windows.h>
+	"functionsmain.cpp"
+
+1600175110 c:\users\user\desktop\hghsdhcrty3456\functionsmain.cpp
+	"functioncircle.cpp"
+	"functionsrays.cpp"
+	<vector>
+
+1600175106 c:\users\user\desktop\hghsdhcrty3456\functioncircle.cpp
+	"functionmanyangle2Dfigure.cpp"
+
+1600175108 c:\users\user\desktop\hghsdhcrty3456\functionmanyangle2dfigure.cpp
+	"functionline.cpp"
+	"functionsmath.cpp"
+
+1600175106 c:\users\user\desktop\hghsdhcrty3456\functionline.cpp
+	<windows.h>
+	"math.h"
+
+1600175112 c:\users\user\desktop\hghsdhcrty3456\functionsmath.cpp
+
+1600175112 c:\users\user\desktop\hghsdhcrty3456\functionsrays.cpp
+

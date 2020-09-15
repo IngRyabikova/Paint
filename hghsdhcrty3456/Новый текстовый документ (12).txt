@@ -1,0 +1,20 @@
+    while(DynamicPaintActive.color == colorBefore)
+    {
+        DynamicPaintActive.y--;
+    }
+    DynamicPaintActive.y++;
+    while(DynamicPaintActive.color == colorBefore)
+    {
+        DynamicPaintActive.x--;
+    }
+    DynamicPaintActive.x++;
+    
+    while(DynamicPaintActive.color == colorBefore)
+    {
+        while(DynamicPaintActive.color == colorBefore)
+        {
+            SetPixel(hdc, DynamicPaintActive.x, DynamicPaintActive.y, colorAfter);
+            DynamicPaintActive.x++;
+        }
+        DynamicPaintActive.y++;
+    }

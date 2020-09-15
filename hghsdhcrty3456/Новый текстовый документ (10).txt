@@ -1,0 +1,133 @@
+
+
+
+struct Dot
+{
+HDC hdc;
+double X;
+double Y;
+double R;
+COLORREF Color;
+void Create()
+{
+    CircleFilledOut(hdc, X, Y, R, Color);
+}
+};
+
+
+
+
+
+
+
+long double f = 30;
+long double a = f*3.14 / 180;
+int Rd = 40;
+long double nnn = 0.1;
+
+
+double Dot1X = WindowWidthFM/2;
+double Dot1Y = WindowHeightFM/2;
+double Dot2X = WindowWidthFM/2;
+double Dot2Y = WindowHeightFM/3;
+
+
+
+
+
+void Main2(HDC hdc)
+{
+
+
+            Dot dot1  = {/*HDC = */hdc,
+                         /*X = */Dot1X,
+                         /*Y = */Dot1Y,
+                         /*R = */10,
+                         /*Color = */RGB(100,0,0)};
+            Dot dot2  = {/*HDC = */hdc,
+                         /*X = */Dot2X,
+                         /*Y = */Dot2Y,
+                         /*R = */10,
+                         /*Color = */RGB(100,0,0)};
+
+                n:
+                //WindowClear(hdc, RGB(255,255,255));
+                dot1.Create();
+                dot2.Create();
+                Line(hdc,dot1.X,dot1.Y,dot2.X,dot2.Y,RGB(200,200,0));
+                if (GetAsyncKeyState('A'))
+                {
+                    f += nnn;
+                    WindowClear(hdc, RGB(255,255,255));
+                    Sleep(200);
+                }
+                if (GetAsyncKeyState('D'))
+                {
+                    f -= nnn;
+                    WindowClear(hdc, RGB(255,255,255));
+                    Sleep(200);
+                }
+            dot2.Y=dot1.Y-sin(f)+cos(f)*Rd;
+            dot2.X=dot1.X+cos(f)-sin(f)*Rd;
+            if (GetAsyncKeyState('N')){ nnn += 0.1; WindowClear(hdc, RGB(255,255,255));}
+            if (GetAsyncKeyState('M')){ nnn -= 0.1; WindowClear(hdc, RGB(255,255,255));}
+            if(!GetAsyncKeyState('1')) goto n;
+}
+
+
+
+
+
+
+
+//Старый код:
+
+/*
+
+
+void PaintN(HDC hdc, double x0, double y0, int radius, COLORREF color)
+{
+    double x1;
+    double y1;
+    double F0 = 0.4;
+    for(int i = radius; i > 0; i--)
+    {
+        CircleBresenham(hdc, x0, y0, i, color);
+        x0 += x0*cos(F0) - y0*sin(F0);
+        y0 += x0*sin(F0) - y0*cos(F0);
+        F0 += 0.1;
+    }
+}
+
+
+
+
+
+
+
+
+struct Dot
+{
+double X;
+double Y;
+double R;
+double Color;
+void Create()
+{
+    GetSysColorBrush(Color);
+    GetSysColor(Color);
+    Circle(X,Y,R);
+}
+};
+
+
+
+
+
+
+
+
+*/
+
+
+
